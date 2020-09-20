@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Biblioteca</title>
+</head>
+
+<body>
+    <!--------------------Navbar------------------------->
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./html/news.html">News</a></li>
+        <li><a href="./html/contact.html">Contact</a></li>
+        <li><a href="./html/about.html">About</a></li>
+    </ul>
+
+    <h1>Biblioteca</h1>
+    <p></p>
+    <input type="text" name="" value="" id="titulo" placeholder="Título">
+    <input type="text" name="" value="" id="autor" placeholder="Autor">
+    <input type="text" name="" value="" id="tema" placeholder="Temática">
+    <input type="text" name="" value="" id="fecha" placeholder="Fecha">
+    <button type="button" id="btnAgregar">Agregar</button>
+    <p></p>
+    <button type="button" id='masModerno'>Doc. mas Moderno</button>
+    <button type="button" id='masAntiguo'>Doc. mas antiguo</button>
+    <div id='antiguoModerno'></div>
+
+    <button type="button" id='masTematica'>Tema Mas Usado</button>
+    <button type="button" id='masDeUnAño'>Docs. con +1 año</button>
+    <button type="button" id='autorMasDocs'>Autor con + docs.</button>
+    <p id='numero'></p>
+    <p></p>
+    <input type="text" name="" value="" id="ingresarTema" placeholder="Ingresar tematica">
+    <button type="button" id='listaTematica'>Buscar por Tema</button>
+    <table>
+        <thead>
+            <td>Título</td>
+        </thead>
+        <tbody id="tablaPorTema"></tbody>
+    </table>
+    <p></p>
+
+    <table>
+        <thead>
+            <td>Título</td>
+            <td>Autor</td>
+            <td>Temática</td>
+            <td>Fecha</td>
+        </thead>
+        <tbody id="tblBiblioteca"></tbody>
+    </table>
+    <p></p>
+    <script src="../js/biblioteca33.js"></script>
+</body>
+
+</html>

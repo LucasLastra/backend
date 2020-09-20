@@ -1,0 +1,10 @@
+pulsera,10
+percha,11
+campera,300
+bufanda,350
+gorro,33
+aros,5
+lentes,100
+jean,500
+remera,100
+zapatillas,310

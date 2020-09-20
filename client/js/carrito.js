@@ -9,18 +9,16 @@ let compras = [];
 function agregar() {
     console.log("Funcion Agregar");
     let producto = document.querySelector('#producto').value;
-    let precio =
-        parseInt(document.querySelector('#precio').value);
+    let precio = parseInt(document.querySelector('#precio').value);
+    let descripccion = document.querySelector('#descripccion').value;
     let renglon = {
         "producto": producto,
-        "precio": precio
+        "precio": precio,
+        'descripccion': descripccion
     }
     compras.push(renglon);
-
     mostrarTablaCompras();
-
 }
-
 
 function sumar() {
     console.log("Funcion Sumar");
@@ -47,8 +45,23 @@ function mostrarTablaCompras() {
             <tr>
             <td>${r.producto}</td>
             <td>${r.precio}</td>
+            <td>${r.descripccion}</td>
             </tr>
             `;
     }
     document.querySelector("#tblCompras").innerHTML = html;
 }
+
+async function load() {
+
+    //container.innerHTML = "<h1>Loading...</h1>";
+    let response = await fetch('/app');
+    if (response.ok) {
+
+        let r = await fetch('/app');
+        compras = await r.json();
+        mostrarTablaCompras();
+    }
+}
+
+load();
